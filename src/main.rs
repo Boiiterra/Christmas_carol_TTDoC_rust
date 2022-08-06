@@ -1,10 +1,8 @@
 #![allow(non_snake_case)]
-#![allow(unused)]
 
 fn main() {
     let first_half: &str = "On the";
     let second_half: &str = "day of Christmas my true love sent to me";
-    let separator: &str = "\n";
     let days: [&str; 12] = [
         "first",
         "second",
@@ -36,11 +34,9 @@ fn main() {
 
     for index in 0..12 {
         println!("\n{first_half} {} {second_half}", days[index]);
-        // println!("{}", words[index]);
         for i_words in 0..index {
             println!("{}", words[index-i_words]);
         }
         println!("{}", words[0]);
     }
-
 }
